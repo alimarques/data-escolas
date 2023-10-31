@@ -21,5 +21,5 @@ class Extractor:
         df['status_funcionamento'] = df['status_funcionamento'].map(STATUS_FUNCIONAMENTO)
         df['endereco_completo'] = df['endereco'] + ', ' + df['endereco_numero'] + ', ' + df['bairro']
         self.data = df
-        df.to_csv(SAVE_PATH)
+        df.to_csv(SAVE_PATH, index=False)
         return df
